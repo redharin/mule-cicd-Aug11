@@ -9,6 +9,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="app-test2-cicdFlow" doc:id="ce881ccf-a396-4f94-acbc-d578285e78fe" >
 		<http:listener doc:name="Listener" doc:id="a8bece27-5f52-4e4a-9eab-9139224165fe" config-ref="HTTP_Listener_config" path="/cicd"/>
+		<logger level="INFO" doc:name="Logger" doc:id="948ab2ee-2a5d-4e84-8cc5-1e1e63146382" />
 		<set-payload value='#["Successfully completed CICD integration using Jenkins..."]' doc:name="Set Payload" doc:id="54a473ec-1c11-46db-8507-1a30bd88f692" />
 		<logger level="INFO" doc:name="Logger" doc:id="9493383d-3097-4ab4-8980-2aa55a5a5ae3" />
 	</flow>
