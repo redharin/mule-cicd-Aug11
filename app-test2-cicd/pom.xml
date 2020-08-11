@@ -26,6 +26,19 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+					<cloudHubDeployment>
+      					<uri>https://anypoint.mulesoft.com</uri>
+      					<muleVersion>4.2.0</muleVersion>
+     					<username>redharinja</username>
+      					<password>Hasr@143</password>
+      					<applicationName>app-cicd-demo</applicationName>
+      					<environment>Sandbox</environment>
+      					<workers>1</workers>
+      					<workerType>Micro</workerType>
+      					<properties>
+        					<key>value</key>
+      					</properties>
+    				</cloudHubDeployment>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -61,15 +74,10 @@
         </repository>
     </repositories>
     <pluginRepositories>
-        <pluginRepository>
-            <id>mulesoft-releases</id>
-            <name>mulesoft release repository</name>
-            <layout>default</layout>
-            <url>https://repository.mulesoft.org/releases/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
+  		<pluginRepository>
+    		<id>mule-public</id>
+   			 <url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
+  		</pluginRepository>
+	</pluginRepositories>
 
 </project>
